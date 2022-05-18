@@ -1,0 +1,40 @@
+version: "3.7"
+services:
+    web:
+        image: architecture_web
+        container_name: architecture_web
+        restart: always
+        build:
+            context: .
+            dockerfile: dockerfile
+        environment:
+            - ConnectionStrings:Context=Server=architecture_database;Database=Database;User Id=pa;Password=P4ssW0rd!;
+        depends_on:
+            - database
+        networks:
+            - network
+        ports:
+            - 8090:80
+    database:
+        image: postgres
+        container_name: architecture_database
+        restart: always
+        environment:
+            - ACCEPT_EULA=Y
+            - POSTGRES_PASSWORD=P4ssW0rd!
+            - POSTGRES_USER=pa
+        networks:
+            - network
+        ports:
+            - 1433:1433
+        volumes:
+            - database:/var/opt/mssql
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - 1234:8080
+networks:
+    network:
+volumes:
+    database:

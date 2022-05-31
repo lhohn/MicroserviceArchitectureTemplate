@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+    <ItemGroup>
+                  <PackageReference Include="DotNetCore.EntityFrameworkCore" Version="16.32.0" />
+        <PackageReference Include="DotNetCore.Objects" Version="16.32.0" />
+        <PackageReference Include="EFCore.NamingConventions" Version="6.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.4">
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.4" />
+        <PackageReference Include="DotNetCore.Domain" Version="16.32.0" />
+        <PackageReference Include="DotNetCore.Validation" Version="16.32.0" />
+                <PackageReference Include="DotNetCore.AspNetCore" Version="16.32.0" />
+        <PackageReference Include="DotNetCore.IoC" Version="16.32.0" />
+        <PackageReference Include="DotNetCore.Logging" Version="16.32.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+    </ItemGroup>
+</Project>
